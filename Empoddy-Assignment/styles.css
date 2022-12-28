@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+li h1{
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+li p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav button{
+    position: relative;
+    text-align: center;
+    size: 30px;
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+
+
+
+
+
+header {
+    min-height: 320px;
+    background-color: rgb(49, 49, 46);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0%;
+}
+
+
+
+
+
+.register :hover{
+    color: black;
+    background-color: rgb(23, 129, 115);
+}
+
+
+.cards{
+    position: relative;
+    background-color: #4e5254;
+    min-height: 300px;
+}
+
+
+.card1 {
+    margin-left: 100px;
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    background-color: rgb(203, 195, 195);
+}
+
+.card-inner1 {
+    margin-top: 0px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+
+
+
+.card2 {
+    margin-left: 580px;
+    margin-top: -300px;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    background-color: rgb(203, 195, 195);
+}
+
+
+.card-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.image-size{
+    width: 100%;
+    height: 32vw;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+.card3 {
+    margin-left: 1050px;
+    margin-top: -300px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    background-color: rgb(203, 195, 195);
+}
+
+
+.card-inner3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.temp h2 {
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+.bottom {
+    margin-top: 80px;
+}
+
+.bottom h2,
+p {
+    text-align: center;
+    font-weight: 300px;
+}
+
+
+
+
+
+
+
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(8, 58, 99);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 400px;
+}
+
+
+
+
+footer .social_icon li a {
+    font-size: 1.5em;
+    color: aliceblue;
+    margin: 0 20px;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+
+
+
+footer .menu li {
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+footer .menu li a {
+    font-size: 1em;
+    color: aliceblue;
+    margin: 0 200px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+    color: rgb(229, 218, 18);
+    transform: translateY(-2px);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
