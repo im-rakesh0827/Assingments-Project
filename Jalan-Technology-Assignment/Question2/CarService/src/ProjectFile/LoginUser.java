@@ -10,7 +10,7 @@ import static ProjectFile.ApplyFontStyle.applyFontStyleButtonBig;
 import static ProjectFile.ApplyFontStyle.applyFontStyleLabelField;
 
 
-public class LoginAdmin extends JFrame implements ActionListener {
+public class LoginUser extends JFrame implements ActionListener {
 
     JLabel labelHeading, labelEmail, labelPassword;
     JTextField tfEmail;
@@ -23,11 +23,10 @@ public class LoginAdmin extends JFrame implements ActionListener {
 
 
 
-    public LoginAdmin(){
+    public LoginUser(){
         setLayout(null);
-        getContentPane().setBackground(Color.pink);
 
-        labelHeading = new JLabel("Login Form : Admin");
+        labelHeading = new JLabel("Login Form : User");
         labelHeading.setBounds(170, 25, 320, 35);
         labelHeading.setFont(new Font("serif", Font.BOLD, 35));
         add(labelHeading);
@@ -114,7 +113,7 @@ public class LoginAdmin extends JFrame implements ActionListener {
                 String email = tfEmail.getText();
                 String password  = String.valueOf(pfPassword.getPassword());
                 Conn c = new Conn();
-                String query = "select * from admins where email='"+email+"'and password = '"+password+"'";
+                String query = "select * from users where email='"+email+"'and password = '"+password+"'";
                 ResultSet resultSet = c.statement.executeQuery(query);
                 if(resultSet.next()){
                     JOptionPane.showMessageDialog(
@@ -124,6 +123,7 @@ public class LoginAdmin extends JFrame implements ActionListener {
                             JOptionPane.ERROR_MESSAGE
                     );
                     setVisible(false);
+                    new ViewCharges();
                 }else{
                     JOptionPane.showMessageDialog(
                             this,
@@ -138,7 +138,7 @@ public class LoginAdmin extends JFrame implements ActionListener {
             }
         }else if(e.getSource().equals(buttonRegister)){
             setVisible(false);
-            new RegisterAdmin();
+            new RegisterUser();
         }else if(e.getSource().equals(buttonBack)){
             setVisible(false);
             new Welcome();
@@ -147,9 +147,10 @@ public class LoginAdmin extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new LoginAdmin();
+        new LoginUser();
     }
 
 
 
 }
+

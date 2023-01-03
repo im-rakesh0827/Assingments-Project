@@ -6,11 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
-import static ProjectFile.ApplyFontStyle.applyFontStyleButtonBig;
-import static ProjectFile.ApplyFontStyle.applyFontStyleLabelField;
 
 
-public class LoginAdmin extends JFrame implements ActionListener {
+public class CarOwner extends JFrame implements ActionListener {
 
     JLabel labelHeading, labelEmail, labelPassword;
     JTextField tfEmail;
@@ -23,11 +21,12 @@ public class LoginAdmin extends JFrame implements ActionListener {
 
 
 
-    public LoginAdmin(){
+    public CarOwner(){
         setLayout(null);
-        getContentPane().setBackground(Color.pink);
+        getContentPane().setBackground(Color.getHSBColor(120,258,150));
 
-        labelHeading = new JLabel("Login Form : Admin");
+
+        labelHeading = new JLabel("Login : Car Owner");
         labelHeading.setBounds(170, 25, 320, 35);
         labelHeading.setFont(new Font("serif", Font.BOLD, 35));
         add(labelHeading);
@@ -106,6 +105,13 @@ public class LoginAdmin extends JFrame implements ActionListener {
 
     }
 
+    private void applyFontStyleButtonBig(JButton[] buttonArray) {
+
+    }
+
+    private void applyFontStyleLabelField(JLabel[] labelArray, JTextField[] textFieldArray) {
+
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -114,7 +120,7 @@ public class LoginAdmin extends JFrame implements ActionListener {
                 String email = tfEmail.getText();
                 String password  = String.valueOf(pfPassword.getPassword());
                 Conn c = new Conn();
-                String query = "select * from admins where email='"+email+"'and password = '"+password+"'";
+                String query = "select * from employees where email='"+email+"'and password = '"+password+"'";
                 ResultSet resultSet = c.statement.executeQuery(query);
                 if(resultSet.next()){
                     JOptionPane.showMessageDialog(
@@ -136,18 +142,12 @@ public class LoginAdmin extends JFrame implements ActionListener {
             }catch (Exception E){
                 E.printStackTrace();
             }
-        }else if(e.getSource().equals(buttonRegister)){
-            setVisible(false);
-            new RegisterAdmin();
-        }else if(e.getSource().equals(buttonBack)){
-            setVisible(false);
-            new Welcome();
         }
 
     }
 
     public static void main(String[] args) {
-        new LoginAdmin();
+       new CarOwner();
     }
 
 
