@@ -11,8 +11,8 @@
             "driver": "MySQL",
             "name": "MySQL Local",
             "database": "student_db",
-            "username": "root",
-            "password": "Apple@0827"
+            "username": "new_sqluser",
+            "password": "Password"
         }
     ]
 }
